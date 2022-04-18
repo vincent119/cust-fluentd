@@ -17,6 +17,10 @@ RUN apk add --no-cache geoip geoip-dev libmaxminddb \
  && sudo gem install fluent-plugin-grok-parser \
  && sudo gem install fluent-plugin-add \
  && sudo gem install fluent-plugin-gelf \
+ && sudo gem install fluent-plugin-grafana-loki \
+ && sudo gem install fluent-plugin-kubernetes_metadata_filter \
+ && sudo gem install fluent-plugin-record-modifier \
+ && sudo gem install fluent-plugin-rewrite-tag-filter \
  && sudo gem sources --clear-all \
  && apk del .build-deps \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
